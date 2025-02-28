@@ -36,6 +36,7 @@ class EventlistView {
         this.newEventStart = document.querySelector("#new-event-start-date");
         this.newEventEnd = document.querySelector("#new-event-end-date");
         this.addEventBtn = document.querySelector(".add-event-btn");
+        this.eventsContainer = document.querySelector(".event-list_items");
 
         this.addEventBtn.addEventListener("click", () => {
             this.newEventForm.style.display = "block";
