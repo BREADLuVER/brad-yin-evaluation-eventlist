@@ -7,9 +7,14 @@ export default class EventlistView {
         this.newEventEnd = document.querySelector("#new-event-end-date");
         this.addEventBtn = document.querySelector(".add-event-btn");
         this.eventsContainer = document.querySelector(".event-list_items");
+        this.closeFormBtn = document.querySelector(".close-form-btn");
 
         this.addEventBtn.addEventListener("click", () => {
             this.newEventForm.style.display = "block";
+        });
+        
+        this.closeFormBtn.addEventListener("click", () => {
+            this.newEventForm.style.display = "none";
         });
     }
 
