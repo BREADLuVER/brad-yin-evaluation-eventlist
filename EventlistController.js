@@ -18,13 +18,13 @@ export default class EventlistController {
     setupAddEvent() {
         this.view.newEventForm.addEventListener("submit", async (e) => {
             e.preventDefault();
-            const title = this.view.newEventTitle.value;
+            const eventName = this.view.newEventTitle.value;
             const startDate = this.view.newEventStart.value;
             const endDate = this.view.newEventEnd.value;
 
-            if (!title || !startDate || !endDate) return;
+            if (!eventName || !startDate || !endDate) return;
 
-            const newEvent = await eventlistAPI.addEvent({ title, startDate, endDate });
+            const newEvent = await eventlistAPI.addEvent({ eventName, startDate, endDate });
 
             this.model.addEvent(newEvent);
             this.view.addEvent(newEvent);
