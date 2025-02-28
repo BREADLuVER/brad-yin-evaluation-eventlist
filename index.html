@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="events-list">
+        <button class="add-event-btn">add event</button>
+        <form class="new-event-form" style="display: none">
+            <input type="text" id="new-event-title" placeholder="event name">
+            <input type="date" id="new-event-start-date">
+            <input type="date" id="new-event-end-date">
+            <button type="submit">save event</button>
+        </form>
+        <div class="event-list_items"></div>
+    </div>
+    
+    <script src="eventlistApi.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
