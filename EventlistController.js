@@ -23,8 +23,6 @@ export default class EventlistController {
             const startDate = this.view.newEventStart.value;
             const endDate = this.view.newEventEnd.value;
     
-            if (!eventName || !startDate || !endDate) return;
-    
             const editingId = this.view.newEventForm.dataset.editingId;
     
             if (editingId) {
