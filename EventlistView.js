@@ -36,16 +36,18 @@ export default class EventlistView {
     validateDates() {
         const startDate = new Date(this.newEventStart.value);
         const endDate = new Date(this.newEventEnd.value);
-        return startDate < endDate; // Start date must be before end date
+        return startDate < endDate
     }
 
     addEvent(newEvent) {
         const { id, eventName, startDate, endDate } = newEvent;
         const eventElement = document.createElement("div");
         eventElement.classList.add("event");
-        eventElement.id = `event-${id}`;
+        eventElement.id = `${id}`;
         eventElement.innerHTML = `
-            <span class="event__title">${eventName} (${startDate} - ${endDate})</span>
+            <span class="event__title">
+                ${eventName} <span class="event__date">(${startDate} - ${endDate})</span>
+            </span>
             <div class="event-buttons">
                 <button class="event__edit">Edit</button>
                 <button class="event__delete">Delete</button>
@@ -55,7 +57,7 @@ export default class EventlistView {
     }
 
     removeEvent(eventId) {
-        const eventElement = document.getElementById(`event-${eventId}`);
+        const eventElement = document.getElementById(`${eventId}`);
         if (eventElement) eventElement.remove();
     }
 

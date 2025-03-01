@@ -65,3 +65,20 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    .event__title {
+        display: block;
+        font-size: 12px;
+    }
+
+    .event__date {
+        display: block;
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .event__delete, .event__edit {
+        padding: 3px 6px;
+        font-size: 12px;
+    }
+}
