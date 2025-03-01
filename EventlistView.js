@@ -21,7 +21,7 @@ export default class EventlistView {
         this.newEventForm.addEventListener("submit", (e) => {
             if (!this.validateDates()) {
                 e.preventDefault();
-                alert("Start date must be before the end date.");
+                alert("wrong dates");
             }
         });
     }
