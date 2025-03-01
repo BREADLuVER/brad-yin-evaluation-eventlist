@@ -33,8 +33,10 @@ export default class EventlistView {
         eventElement.id = `event-${id}`;
         eventElement.innerHTML = `
             <span class="event__title">${eventName} (${startDate} - ${endDate})</span>
-            <button class="event__edit">Edit</button>
-            <button class="event__delete">Delete</button>
+            <div class="event-buttons">
+                <button class="event__edit">Edit</button>
+                <button class="event__delete">Delete</button>
+            </div>
         `;
         this.eventsList.appendChild(eventElement);
     }

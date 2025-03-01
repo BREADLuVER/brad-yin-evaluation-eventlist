@@ -52,7 +52,7 @@ export default class EventlistController {
     setupDeleteEvent() {
         this.view.eventsList.addEventListener("click", async (e) => {
             if (e.target.classList.contains("event__delete")) {
-                const eventElem = e.target.parentElement;
+                const eventElem = e.target.closest(".event"); 
                 const eventId = eventElem.id.split("-")[1];
 
                 await eventlistAPI.deleteEvent(eventId)
@@ -65,7 +65,7 @@ export default class EventlistController {
     setupEditButton() {
         this.view.eventsList.addEventListener("click", (e) => {
             if (e.target.classList.contains("event__edit")) {
-                const eventElem = e.target.parentElement;
+                const eventElem = e.target.closest(".event"); 
                 const eventId = eventElem.id.split("-")[1];
                 const event = this.model.getEvents().find((ev) => ev.id == eventId);
 

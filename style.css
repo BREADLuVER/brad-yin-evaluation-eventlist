@@ -16,7 +16,7 @@ body {
 }
 
 .add-event-btn {
-    background-color: #28a745; /* Green */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 8px;
@@ -40,11 +40,25 @@ body {
     margin-top: 10px;
     border-radius: 5px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #121111;
+    border: 1px solid #31cf3c;
+}
+
+.event-buttons {
+    display: flex;
+    gap: 10px;
 }
 
 .event__delete {
-    background-color: #dc3545; /* Red */
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event__edit {
+    background-color: #3559dc;
     color: white;
     border: none;
     padding: 5px 10px;
