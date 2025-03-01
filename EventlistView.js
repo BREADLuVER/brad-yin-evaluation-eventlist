@@ -17,6 +17,13 @@ export default class EventlistView {
         this.closeFormBtn.addEventListener("click", () => {
             this.newEventForm.style.display = "none";
         });
+
+        this.newEventForm.addEventListener("submit", (e) => {
+            if (!this.validateDates()) {
+                e.preventDefault();
+                alert("Start date must be before the end date.");
+            }
+        });
     }
 
     renderEvents(events) {
@@ -24,6 +31,12 @@ export default class EventlistView {
         for (const event of events) {
             this.addEvent(event);
         }
+    }
+
+    validateDates() {
+        const startDate = new Date(this.newEventStart.value);
+        const endDate = new Date(this.newEventEnd.value);
+        return startDate < endDate; // Start date must be before end date
     }
 
     addEvent(newEvent) {
